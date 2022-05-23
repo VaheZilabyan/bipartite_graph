@@ -20,11 +20,11 @@ void input(std::ifstream& fin, std::vector<std::vector<int>>& graph, int arr[][S
 		if (x == y)
 			isBipartite = false;
 		if (x > V || y > V) {
-			std::cout << "Wrong input..." << std::endl;
+			std::cout << "Wrong input(x,y > V)..." << std::endl;
 		}
 		if (x <= 0 || y <= 0)
 		{
-			std::cout << "Wrong input..." << std::endl;
+			std::cout << "Wrong input(x,y <= 0)..." << std::endl;
 			exit(0);
 		}
 	
@@ -44,7 +44,18 @@ int main()
 	std::vector<std::vector<int>> graph; 
 	std::ifstream fin("../data/input.txt");
 	
-	fin >> V;
+	//std::ifstream fin;
+	//fin.open("..data/input.txt");
+	if (fin.is_open())
+	{
+		fin >> V;
+	}
+	else 
+	{
+		std::cout << "File-y chbacvec..." << std::endl;
+		//return -1;
+	}  
+	//fin >> V;
 	
 	int arr[SIZE][SIZE];
     graph.resize(V);
@@ -56,7 +67,7 @@ int main()
 	
 	if (V <= 0)
 	{	
-		std::cout << "Wrong input..." << std::endl;
+		std::cout << "Wrong input(V <= 0)..." << std::endl;
 		return -1;
 	}
 	
