@@ -42,7 +42,7 @@ int main()
 {	
 	std::vector<int> color;
 	std::vector<std::vector<int>> graph; 
-	std::ifstream fin("../data/input.txt");
+	std::ifstream fin("data/input.txt");
 	
 	//std::ifstream fin;
 	//fin.open("..data/input.txt");
