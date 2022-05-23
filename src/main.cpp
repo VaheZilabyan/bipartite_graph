@@ -45,7 +45,7 @@ int main()
 	std::ifstream fin("data/input.txt");
 	
 	//std::ifstream fin;
-	//fin.open("..data/input.txt");
+	//fin.open("data/input.txt");
 	if (fin.is_open())
 	{
 		fin >> V;
