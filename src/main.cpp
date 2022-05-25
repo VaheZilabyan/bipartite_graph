@@ -44,8 +44,6 @@ int main()
 	std::vector<std::vector<int>> graph; 
 	std::ifstream fin("data/input.txt");
 	
-	//std::ifstream fin;
-	//fin.open("data/input.txt");
 	if (fin.is_open())
 	{
 		fin >> V;
@@ -53,9 +51,8 @@ int main()
 	else 
 	{
 		std::cout << "File-y chbacvec..." << std::endl;
-		//return -1;
+		return -1;
 	}  
-	//fin >> V;
 	
 	int arr[SIZE][SIZE];
     graph.resize(V);
