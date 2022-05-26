@@ -103,7 +103,8 @@ int main()
 	else {
 		print_no_bipartite();
 	}
-	
+    
+    std::cout << "\n\n\033[1;32m" << "Github - https://github.com/VaheZilabyan/bipartite_graph.git" << "\033[0m\n";
 	std::cout << std::endl;
     fin.close();
 	
