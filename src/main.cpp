@@ -19,12 +19,8 @@ void input(std::ifstream& fin, std::vector<std::vector<int>>& graph, int arr[][S
 		fin >> x >> y;
 		if (x == y)
 			isBipartite = false;
-		if (x > V || y > V) {
-			std::cout << "Wrong input(x,y > V)..." << std::endl;
-		}
-		if (x <= 0 || y <= 0)
-		{
-			std::cout << "Wrong input(x,y <= 0)..." << std::endl;
+		if (x > V || y > V || x <= 0 || y <= 0) {
+			std::cout << "Wrong input(incorrect input of adjacent vertices)..." << std::endl;
 			exit(0);
 		}
 	
@@ -44,13 +40,11 @@ int main()
 	std::vector<std::vector<int>> graph; 
 	std::ifstream fin("data/input.txt");
 	
-	if (fin.is_open())
-	{
+	if (fin.is_open()) {
 		fin >> V;
 	}
-	else 
-	{
-		std::cout << "File-y chbacvec..." << std::endl;
+	else {
+		std::cout << "The file could not be opened..." << std::endl;
 		return -1;
 	}  
 	
@@ -62,9 +56,8 @@ int main()
 	
 	std::cout << std::endl;
 	
-	if (V <= 0)
-	{	
-		std::cout << "Wrong input(V <= 0)..." << std::endl;
+	if (V <= 0) {	
+		std::cout << "Wrong input(the number of vertices of the graph is less than 0)..." << std::endl;
 		return -1;
 	}
 	
@@ -74,24 +67,20 @@ int main()
 	std::cout << "\033[1;31m" << "Edge = " << E << "\033[0m" << "\n\n";
 	matrix(arr);
 	
-	for (int i = 0; i < V; i++) 
-	{
+	for (int i = 0; i < V; i++) {
 		if (graph[i].empty())
 			std::cout << i + 1 << " Vertex is isolated";
         else 
 			std::cout << i + 1 << " Vertex: The neighbors of this vertex are: ";
-        for (int v : graph[i]) 
-		{     
+        for (int v : graph[i]) {     
             std::cout << "\033[1;32m" << v + 1 << "\033[0m ";                    
         }  
         std::cout << std::endl;
     }
 	std::cout << std::endl;
 	
-    for (int i = 0; i < V; i++) 
-	{
-        if (color[i] == 0)
-		{
+    for (int i = 0; i < V; i++) {
+        if (color[i] == 0) {
 			dfs(graph, color, i, 1);
 		}
     }
