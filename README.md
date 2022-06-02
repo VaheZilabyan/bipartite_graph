@@ -1,18 +1,17 @@
 # bipartite_graph
-Գրաֆը ներմուծելու համար սկզբում ներմուծում ենք նրա գագաթների քանակը, 
-հետո հարևան գագաթները, օրինակ՝
 
-8 <br/>
-1 2 <br/>
-2 6 <br/>
-6 3 <br/>
-6 7 <br/>
-7 8 <br/>
-3 8 <br/>
-3 4 <br/>
-4 5 <br/>
-1 5 <br/>
-5 8 <br/>
-
-Առաջին տողում ներմուծել ենք գագաթների քանակը՝ 8, 
-մյուս տողերում հարևան գագաթները։
+HOW TO USE: <br/>
+1. Create/Open 'input.txt' file in directory <data> <br/>
+2. Write the number of graph vertices and adjacent vertices in file <br/>
+    EXAMPLE: <br/> 
+    5 (Number of vertices) <br/>
+    1 2 <br/>
+    2 3 <br/>
+    3 4 <br/>
+    4 5 <br/> 
+    1 4 <br/>
+    2 5 <br/>
+  <br/>
+3. Install graphviz: sudo apt install graphviz <br/>
+4. Compile the program: make <br/>
+5. Run the program: ./graph.exe <br/>
