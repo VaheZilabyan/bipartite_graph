@@ -1,17 +1,18 @@
-# bipartite_graph
+# Bipartite Graph
 
-HOW TO USE: <br/>
-1. Create/Open 'input.txt' file in directory <data> <br/>
-2. Write the number of graph vertices and adjacent vertices in file <br/>
-    EXAMPLE: <br/> 
-    5 (Number of vertices) <br/>
-    1 2 <br/>
-    2 3 <br/>
-    3 4 <br/>
-    4 5 <br/> 
-    1 4 <br/>
-    2 5 <br/>
-  <br/>
-3. Install graphviz: sudo apt install graphviz <br/>
-4. Compile the program: make <br/>
-5. Run the program: ./graph.exe <br/>
+### HOW TO USE: 
+**1. Install graphviz in home directory:** ```sudo apt install graphviz```<br/>
+__2. Create/Open ```'input.txt'``` file in directory ```data```__ <br/>
+**3. Write the number of graph vertices and adjacent vertices in file** <br/>
+
+    EXAMPLE: 
+    5 (Number of vertices) 
+    1 2 
+    2 3 
+    3 4 
+    4 5 
+    1 4 
+    2 5 
+**4. Come back: ```cd ..```** <br/>
+**5. Compile the program:** ```make``` <br/>
+**6. Run the program:** ```./graph.exe``` <br/>
